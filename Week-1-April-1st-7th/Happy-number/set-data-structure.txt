@@ -1,0 +1,7 @@
++ set() in python and unordered_set in C++ are implemented using """hash table"""
++ Both can optimize operations... Time complexity: O(1)
+- Membership testing using ""in"" operator (Python) and ""count"" in C++
+- ""add"" and ""remove"" elements
+
+#References
+[1] https://www.quora.com/Why-do-sets-in-Python-have-an-algorithmic-complexity-of-O-1
