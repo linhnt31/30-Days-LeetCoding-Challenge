@@ -5,7 +5,7 @@
 
 """ dict
 - If we use: key in dict ----> Time complexity: O(n)
-- ELse, we use: dict.get(key) -----> TIme complexity: O(1)
+- ELse, we use: dict.get(key) -----> TIme complexity: O(1) (hash-table)
 + dict.get(key) ---> return the value of that key. It key is not existing in dict --> return None
 
 """

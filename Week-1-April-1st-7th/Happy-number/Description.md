@@ -6,9 +6,9 @@ A happy number is a number defined by the following process: Starting with any p
 
 ###### Example
 ```
-Input: 19
-Output: true
-Explanation: 
+**Input:** 19
+**Output:** true
+**Explanation:** 
 12 + 92 = 82
 82 + 22 = 68
 62 + 82 = 100
