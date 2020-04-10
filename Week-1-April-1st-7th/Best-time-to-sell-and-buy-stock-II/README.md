@@ -7,7 +7,6 @@ ___
 Iteration | Recurtion |
 --- | --- |
 Fast, short time complexity| Slow, big time complexity |
---- | --- |
 Hareder techniques | Order does'n matter, esier to apply|
 
 ##### Use cases
