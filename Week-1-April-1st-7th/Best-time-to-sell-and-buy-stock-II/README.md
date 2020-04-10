@@ -7,7 +7,7 @@ ___
 Iteration | Recurtion |
 --- | --- |
 Fast, short time complexity| Slow, big time complexity |
-Hareder techniques | Order does'n matter, esier to apply|
+Harder techniques | Order does'n matter, esier to apply|
 
 ##### Use cases
 ##### 1. Finding an optimal solution
