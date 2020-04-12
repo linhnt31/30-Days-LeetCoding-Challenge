@@ -57,6 +57,8 @@ if __name__ == "__main__":
     print("Result: {}".format(ans)) """
 
 # Method 3: Using iteration
+# Time complexity: O(kn).... Space complexity: O(n)
+""" 
 target_sum = int(input("Enter the target sum: "))
 dp = [0] * (target_sum + 1) #contains the values that are computed
 coins = [1, 3, 4]
@@ -72,8 +74,26 @@ def solve():  ## x = target_sum
 
 if __name__ == "__main__":
     ans = solve()
-    print("Result: {}".format(ans))
+    print("Result: {}".format(ans)) """
 
+# Another questions: Interviewer can request that the values of sum need to be printed.
+target_sum = int(input("Enter the target sum: "))
+coins = [1, 3, 4]
+dp = [0] * (target_sum + 1)
+first = [0] * (target_sum + 1)
 
+def solve(x):
+    for i in range(1, x + 1):
+        dp[i] = float('inf')
+        for c in coins:
+            if i - c >= 0 and dp[i] > dp[i-c] + 1:
+                dp[i] = dp[i-c] + 1
+                first[i] = c
+    print([i for i in dp])
+    while(x):
+        print(first[x], dp[x], x)
+        x -= first[x]
+
+solve(target_sum)
 
 
