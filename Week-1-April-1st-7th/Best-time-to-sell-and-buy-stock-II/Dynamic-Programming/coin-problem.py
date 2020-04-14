@@ -79,21 +79,27 @@ if __name__ == "__main__":
 # Another questions: Interviewer can request that the values of sum need to be printed.
 target_sum = int(input("Enter the target sum: "))
 coins = [1, 3, 4]
-dp = [0] * (target_sum + 1)
-first = [0] * (target_sum + 1)
+value = [0] * (target_sum + 1) # contains the values that are computed
+first = [0] * (target_sum + 1) # contains the first coin that are used in sub problems
+value[0] = 0
 
-def solve(x):
+def solve(x): 
     for i in range(1, x + 1):
-        dp[i] = float('inf')
+        value[i] = float('inf')
         for c in coins:
-            if i - c >= 0 and dp[i] > dp[i-c] + 1:
-                dp[i] = dp[i-c] + 1
-                first[i] = c
-    print([i for i in dp])
-    while(x):
-        print(first[x], dp[x], x)
+            if i - c >= 0 and value[i] > value[i-c] + 1:
+                value[i] = value[i - c] + 1 
+                first[i] = c 
+    
+    while(x > 0):
+        print("{} ".format(first[x]))
         x -= first[x]
+    
+    return value[target_sum]
 
-solve(target_sum)
+if __name__ == "__main__":
+    ans = solve(target_sum)
+    print("Result: {}".format(ans))
+
 
 
