@@ -73,6 +73,7 @@ def solve(x):
             if i - s >= 0:
                 dp[i] += dp[i - s]
     return dp[n]
+    
 if __name__ == "__main__":
     ans = solve(n)
     print("Result: {}".format(ans))
