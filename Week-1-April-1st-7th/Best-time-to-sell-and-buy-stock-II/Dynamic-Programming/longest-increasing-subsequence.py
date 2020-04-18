@@ -17,6 +17,8 @@ with 0 < j < i < n and A[i] > a[j]
                   Then, we plus the value Ai ( account for (Lj + 1) ). As a result, we will have maximum value needed.
 """
 
+# Time complexity: O(n^2) and Space complexity: O(n)
+
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
         if len(nums) == 0:

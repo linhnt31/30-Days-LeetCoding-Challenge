@@ -1,4 +1,4 @@
-# Time complexity: O(n^2) and Space complexity: O(n)
+// Time complexity: O(n^2) and Space complexity: O(n)
 class Solution {
 public:
     int lengthOfLIS(vector<int>& nums) {
