@@ -7,6 +7,8 @@ Count the number of ways, the person can reach the top.
 ways(0) = 1
 ways(1) = 1
 ways(n) = ways(n - 1) + ways(n - 2). (condition: n >= 2)
+
+// Link: https://leetcode.com/problems/climbing-stairs/
 """
 
 
