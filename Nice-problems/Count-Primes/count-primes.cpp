@@ -7,7 +7,7 @@ public:
     // O(square root of x)
     bool isPrime(int x){
         // Note: The only even prime number is 2
-        if(x != 2 && x % 2 == 0) return false;
+        if(x != 2 && x % 2 == 0 || x == 1) return false;
         
         /* For example, we suppose:
         n % d == 0 ---- > n % (n/d) == 0 
