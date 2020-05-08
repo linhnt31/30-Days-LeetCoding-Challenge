@@ -93,6 +93,24 @@ void specialBinarySearch(int a[], int n, int left, int right, int target){
 		cout << "\nThe value is not exist";
 	}
 }
+
+// Method 2: The idea is to make jumps and slow speed when we get closer to the target element
+// Time complexity: O(logn)
+// If the target number is unique
+void binarySearchByJumps(int *a, int n, int target){
+	int currentPos = 0;
+	for(int jump = n / 2; jump >= 1; jump /= 2){
+		while(currentPos + jump < n && *(a + currentPos + jump) <= target){ // This "while loop" runs at most 2 times / a jump --> O(1) time 
+			currentPos += jump;
+		}
+	}
+	if(*(a + currentPos) == target){
+		cout << target << " appears at " << currentPos << " index";
+	}else{
+		cout << target << " is not exist";
+	}	
+}
+
 int main(){
 	int a[MAX_SIZE];
 	int n; cout << "Enter the number of element: "; cin >> n;
