@@ -70,6 +70,31 @@ public:
                     res[i] = 0;
                 }
             }
+	}
+};
+// Method 2
+// Time complexity: O(n)
+// Space complexity: O(1) --> Read Follow up of the description
+class Solution {
+public:
+    vector<int> productExceptSelf(vector<int>& nums) {
+        // product[i] = prefix[L...i] * suffix[i+1...R] (except i)
+        const int n = nums.size();
+        // First, we need to calculate the product of the elements of prefix array called "res"
+        vector<int> res(n); 
+        res[0] = 1; //Because no element sits before first element
+        for(int i = 1; i < n; ++i){
+            res[i] = nums[i - 1] * res[i - 1];
+        }
+        
+        int suffix = 1; //Because no element sits before last element
+        for(int i = n - 1; i >= 0; --i){
+            res[i] *= suffix;
+            suffix *= nums[i];
+        }
+        return res;
+    }
+};
         }
         return res;
     }

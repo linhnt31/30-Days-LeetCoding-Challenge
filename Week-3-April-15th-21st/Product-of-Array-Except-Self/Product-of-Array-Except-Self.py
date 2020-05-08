@@ -1,7 +1,6 @@
 # Method 2
 # Time complexity : O(n)
 # Space complexity: O(1) --> Read description
-# Another solution: Read file.cpp
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         ans = [0] * len(nums)
@@ -17,3 +16,27 @@ class Solution:
             ans[i] = R * ans[i]
             R *= nums[i]
         return ans
+
+# Method 1
+# Time complexity: O(n)
+# Space complexity: O(1) --> Read follow up of the description
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        product_without_zeros = 1
+        count_zeros = 0
+        res = [0] * len(nums)
+        
+        for val in nums:
+            if val != 0:
+                product_without_zeros *= val
+            else:
+                count_zeros += 1
+        
+        if count_zeros == 0:
+            for key, val in enumerate(nums):
+                res[key] = product_without_zeros // val
+        elif count_zeros == 1:
+            for key, val in enumerate(nums):
+                if val == 0:
+                    res[key] = product_without_zeros
+        return res
