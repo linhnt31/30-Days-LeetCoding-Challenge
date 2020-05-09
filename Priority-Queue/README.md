@@ -2,6 +2,7 @@
 ___
 > The C++ priority queue is implemented using a binary heap
 
+> [Time-complexity-to-build-a-priority-queue-or-heap](https://stackoverflow.com/questions/44650882/time-complexity-of-a-priority-queue-in-c)
 Priority queue is a special type of queue
 - Each element is associated with a priority 
 - If elements with the same priority occur, they are served according to their order in the queue.
