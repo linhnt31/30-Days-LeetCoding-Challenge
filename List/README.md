@@ -17,7 +17,7 @@ ___
 ##### My issue
 ![](https://www.geeksforgeeks.org/wp-content/uploads/gq/2013/03/Linkedlist.png)
 
-![]()
+![](https://github.com/linhnt31/30-Days-LeetCoding-Challenge/blob/master/List/linked-list-issue.PNG)
 
 > When we declare a `Node *head` meaning head is a pointer that have **Node** type, point to the first Node and can access data and pointer next of the first Node.
 ## References
